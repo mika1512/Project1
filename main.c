@@ -35,21 +35,21 @@ int main ()
 	if (foreground == NULL)
 	{
 		printf("\nError in loading the image foreground \n");
-		exit(1) ;
+		exit(1);
 	}
 
 	unsigned char* background = stbi_load ( background_img , &width , &height , &channel , 0);
 	if (background == NULL)
 	{
 		printf("\nError in loading the image background \n");
-		exit(1) ;
+		exit(1);
 	}
 
 	unsigned char* forecast = stbi_load ( forecast_img , &width , &height , &channel , 0);
 	if (forecast == NULL)
 	{
 		printf("\nError in loading the image forecast \n");
-		exit(1) ;
+		exit(1);
 	}
 
 	image_background_delete (foreground, background, forecast, width, height, channel);
